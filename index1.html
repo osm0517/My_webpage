@@ -7,7 +7,7 @@
 	<title>Sungmin page</title>
 </head>
 <body>
-  <script>
+  <!--<script>
     function display_image(src, width, height, alt) {
       var a = document.createElement("img");
       a.src = src;
@@ -20,7 +20,31 @@
                    276, 
                    110, 
                    'JavaScriptImage');
+  </script>-->
+  <!--<style>
+    div{
+      float: left;
+    }
+  </style>-->
+  <header>
+    <div style="border: 3px solid black; border-radius: 5px; padding: 10px;position: relative;">
+      <font size = "30"> 
+        <div style = "text-align: center;"; >
+          Let me introduce developer Sungmin Oh
+          <input type="button"id="img_btn"
+           style = "position: absolute;top: 10px;right:30px;background: url('button1.jpg');
+           width: 53px;height: 53px;">
+           
+          </input>
+        </div>
+      </font>
+    </div>
+  </header>
+  <script type="text/javascript"; id = "button1_click">
+      var button1_click = document.getElementById("img_btn");
+      button1_click.addEventListener('click', function(){
+          alert('Hello world');
+      })
   </script>
-  <p>Let me introduce developer Sungmin Oh</p>
 </body>
 </html>
