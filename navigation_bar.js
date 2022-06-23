@@ -29,20 +29,16 @@ const subNavinit = () =>{
     $('#sublink').slideUp();
 }
 const subnavDown = (width) =>{
-    if (width > 768){
-        $('#navigation').mouseenter(function(){
-            $('#sublink').slideDown();
-        })
-    }
+    $('#navigation').mouseenter(function(){
+        $('#sublink').slideDown();
+    })
     
     
 }
 const subnavUp = (width) =>{
-    if(width > 768){
-        $('#navigation').mouseleave(function(){
-            $('#sublink').slideUp();
-        })
-    }
+    $('#navigation').mouseleave(function(){
+        $('#sublink').slideUp();
+    })
     
 }
 const setNavTransition = (width) =>{
@@ -54,8 +50,7 @@ const setNavTransition = (width) =>{
 const handleResize = () =>{
     var width = window.innerWidth;
     setNavTransition(width);
-    subnavDown(width);
-    subnavUp(width);
+    
 };
 const handleSubNav = () =>{
     const width = document.documentElement.scrollWidth;
@@ -71,6 +66,7 @@ const setSubNav = () =>{
 
 }
 
-
+subnavDown();
+subnavUp();
 subNavinit();
 init();

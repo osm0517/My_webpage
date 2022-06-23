@@ -79,6 +79,7 @@ sub {
     
     body{
         overflow-x: hidden;
+        overflow-y: hidden;
     }
     .nav-links{
         position: absolute;
