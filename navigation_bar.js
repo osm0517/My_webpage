@@ -1,7 +1,7 @@
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav-links");
 const navlinks = document.querySelectorAll(".nav_links li");
-const sublink = document.querySelector(".sub-links")
+
 const sub = document.querySelector("sub")
 const navAnimation = () =>{
     navlinks.forEach((link, index) => {
@@ -28,27 +28,33 @@ const navSlide = () => {
 const subNavinit = () =>{
     $('#sublink').slideUp();
 }
-const subnavDown = (width) =>{
-    $('#navigation').mouseenter(function(){
-        $('#sublink').slideDown();
-    })
-    
-    
-}
-const subnavUp = (width) =>{
+const subnavUp = () =>{
     $('#navigation').mouseleave(function(){
         $('#sublink').slideUp();
     })
     
 }
+const subnavDown = () =>{
+    $('#navigation').mouseenter(function(){
+        $('#sublink').slideDown();
+        $('#sublink').mouseleave(function(){
+            $('#sublink').slideUp();
+        })
+    })
+    
+    
+}
+
 const setNavTransition = (width) =>{
     if (width > 768){
         nav.style.transition = "";
+    }else{
+        nav.style.transition = "transform 0.5s ease-in";
     }
 };
 
 const handleResize = () =>{
-    var width = window.innerWidth;
+    var width = event.target.innerWidth;
     setNavTransition(width);
     
 };
@@ -67,6 +73,6 @@ const setSubNav = () =>{
 }
 
 subnavDown();
-subnavUp();
+
 subNavinit();
 init();

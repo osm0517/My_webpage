@@ -32,6 +32,7 @@ sub {
     margin: 2vh;
     font-weight: bold;
     min-height: 8vh;
+    text-decoration: none;
     
 }
 .logo{
@@ -51,6 +52,7 @@ sub {
 
 .nav-links a{
     color: white;
+    text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 14px;
@@ -103,7 +105,7 @@ sub {
     }
     @keyframes navLinkFade {
         from{
-            opacity: 2;
+            opacity: 0;
             transform: translateX(5px);
         }
         to{
